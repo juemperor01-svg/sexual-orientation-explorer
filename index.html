@@ -23,8 +23,8 @@
     <!-- 기본 SEO -->
     <meta name="description" content="BDSM 성향 자기 탐색 퀴즈. 15개 질문으로 Dom/Sub, 감정/감각, 안정/탐험, 바닐라/킨크 4축 분석. MBTI처럼 4글자 코드로 나의 성향을 알아보세요.">
 
-    <!-- Google AdSense — 실제 배포 시 ca-pub-XXXX를 본인 ID로 교체 -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <!-- Kakao AdFit -->
+    <script async type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -415,15 +415,12 @@
             </p>
             <p style="color:var(--text-dim);font-size:0.82rem;margin-bottom:28px;opacity:0.6;">소요시간 약 2~3분</p>
             <button class="btn" style="padding:14px 40px;font-size:1.05rem;" onclick="startQuiz()">검사 시작하기</button>
-            <!-- Ad: Intro bottom -->
-            <div class="ad-slot" style="margin-top:24px;max-height:100px;">
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                    data-ad-slot="1111111111"
-                    data-ad-format="horizontal"
-                    data-full-width-responsive="true"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            <!-- Ad: Intro bottom (애드핏 광고단위 ID를 data-ad-unit에 입력) -->
+            <div class="ad-slot" style="margin-top:24px;">
+                <ins class="kakao_ad_area" style="display:none;width:100%;"
+                    data-ad-unit="YOUR_AD_UNIT_ID_1"
+                    data-ad-width="320"
+                    data-ad-height="100"></ins>
             </div>
         </div>
     </div>
@@ -532,13 +529,10 @@
 
         <!-- Ad: Guide mid-content -->
         <div class="ad-slot ad-slot-inline">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                data-ad-slot="4444444444"
-                data-ad-format="fluid"
-                data-ad-layout-key="-6t+ed+2i-1n-4w"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            <ins class="kakao_ad_area" style="display:none;width:100%;"
+                data-ad-unit="YOUR_AD_UNIT_ID_2"
+                data-ad-width="320"
+                data-ad-height="100"></ins>
         </div>
 
         <h4 style="color:#f87171;margin:28px 0 12px;font-size:0.95rem;">⚠️ 안전 원칙</h4>
@@ -1188,12 +1182,10 @@ function showResult() {
         ` : ''}
 
         <div class="ad-slot ad-slot-inline" id="ad-result-mid">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                data-ad-slot="2222222222"
-                data-ad-format="fluid"
-                data-ad-layout-key="-6t+ed+2i-1n-4w"></ins>
+            <ins class="kakao_ad_area" style="display:none;width:100%;"
+                data-ad-unit="YOUR_AD_UNIT_ID_3"
+                data-ad-width="320"
+                data-ad-height="100"></ins>
         </div>
 
         <div class="partner-card">
@@ -1268,8 +1260,6 @@ function showResult() {
     saveResult({ mainType, ds, es, sn, vk, char: charData.animal });
 
     showSection('result');
-    // Trigger ads in dynamically inserted content
-    try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e) {}
 }
 
 function startQuiz() {
@@ -1489,18 +1479,14 @@ function renderGallery() {
         </div>
 
         <div class="ad-slot ad-slot-bottom">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                data-ad-slot="3333333333"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
+            <ins class="kakao_ad_area" style="display:none;width:100%;"
+                data-ad-unit="YOUR_AD_UNIT_ID_4"
+                data-ad-width="320"
+                data-ad-height="100"></ins>
         </div>
     `;
 
     gallery.innerHTML = html;
-    // Re-trigger ad rendering for dynamically inserted ads
-    try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e) {}
 }
 
 // ===== ACCESSORY PREVIEW ICONS (36x36 mini SVGs) =====
